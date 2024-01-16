@@ -1,4 +1,4 @@
-**Texture Image Comparison**
+# **Texture Image Comparison**
 Exploring texture image processing with the [Kylberg Texture Dataset](https://filedn.com/lkCRue0RhPO7ercIrqFRl2Y/datasets/KylbergTextureDatasetV1/)"subsetOfKylbergTextureDataset-6classes-40samples.zip"The training and validation data are the images numbered 001 to 030, while the testing images have
 the numbers 031 to 040, this project covers preprocessing, histogram-based learning-free classification, and a multilayer perceptron approach. Evaluation metrics are applied to training and validation sets, and a thorough comparison of classification methods is presented. Additionally, potential enhancements through additional pyramid levels are discussed. This project holds significance within my Master's in Computer Vision at uOttawa (2023).
 
@@ -7,20 +7,33 @@ the numbers 031 to 040, this project covers preprocessing, histogram-based learn
 - The uploaded code has been executed and tested successfully within the [Google Colab](https://colab.google/) environment.
 
 ## Texture Image Classification 
-The dataset comprises 6 classes with 40 images each, divided into training,and testing sets.The images are of size 576 × 576.: canvas1/cushion1 /linsseeds1/sand1/seat2/stone1
+The dataset comprises 6 classes with 40 images each, divided into training,and testing sets, images size 576 × 576: canvas1/cushion1 /linsseeds1/sand1/seat2/stone1
 
 ## **Key Tasks Undertaken**    
   1. **Image Preprocessing:**
      - Build an image pyramid with 3 levels for each image with downsampling by a factor of 2. and additional processing.The         final image pyramid size should be [576×576, 228×228, 144×144].
-         + Sample on linsseeds1 
+         + Sample on linsseeds1
            <p align="center">
-            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/a379934c-3a72-4df6-94a6-  f0f0d6c30bc0"/>
-          </p>
+            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/95f6ba1f-6ea2-490b-9ba1-b48e2f4103d0"/>
+           </p>
+
+           <p align="center">
+            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/b6d1c9b9-de69-4f29-b994-61b0918e69ac"/>
+           </p>	
+ 
+           <p align="center">
+            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/f1731b18-7703-4ad7-83dd-5b208892c420"/>
+           </p>
+	  
      - Utilize the Sobel edge filter on each level of the image pyramid, then summarize the filtered texture image by a     
        histogram with a fixed bin size of 256.
          + Sample on Smoothed Histogram (Level 1) on Training Data
            <p align="center">
             <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/6af3f45d-cb07-4680-a3e8-0bfe165d6a76"/>
+          </p>
+         + Sample on Smoothed Histogram (Level 1) on Testing Data
+           <p align="center">
+            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/ecc55c19-2b37-4c95-9b87-6ff17098971e"/>
           </p>
 
   2. **Learning-Free Classification:**
@@ -28,8 +41,7 @@ The dataset comprises 6 classes with 40 images each, divided into training,and t
      - Use the first pyramid level histogram ([1 × 256]).
      - Generate an overall histogram for each texture category by fusing the histograms from all the textures of the same           category in the training set. This can be done by averaging the histograms in each category.
            <p align="center">
-            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/6af3f45d-cb07-4680-a3e8-0bfe165d6a76"/>
-          </p>
+            <img src="https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/b23c7e9f-1fd4-4ce3-bbb2-409cc1bb6082"/>
      - Evaluate on the training and validation sets.
        + Training Set
          <p align="center">
