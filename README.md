@@ -71,19 +71,14 @@ The dataset comprises 6 classes with 40 images each, divided into training,and t
          ```
   
   3. **Learning-Based Classification:**
-     - Build an MLP model with scikit-learn or Keras API.
+     - Build an multilayer perceptron model  to classify an image by using the image feature pyramid from Point 1.
      - Flatten the input feature from shape [3 × 256] to [1 × 768].
      - Train the classifier using the validation set.
      - Evaluate on the training and validation sets, analyzing accuracy, recall, and precision.
   
   4. **Classification Comparison:**
-     - Compare classifiers from Sections 1.3 and 1.4 on the test data subset.
+     - Compare classifiers on the test data subset.
      - Consider performance, training effort, prediction speed, generalization, and robustness.
-     - Provide a brief discussion based on quantifiable criteria.
   
   5. **Improved Classification:**
      - Show histograms for the second and third levels of the pyramid.
-     - Discuss the potential impact of additional pyramid levels on classification improvement.
-     - Support the discussion with diagrams and/or numbers.
-
-	
