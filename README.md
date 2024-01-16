@@ -1,4 +1,4 @@
-![download](https://github.com/RimTouny/Texture-Image-Comparison/assets/48333870/70425907-3835-4d44-8377-a149b368281c)# **Texture Image Comparison**
+**Texture Image Comparison**
 Exploring texture image processing with the [Kylberg Texture Dataset](https://filedn.com/lkCRue0RhPO7ercIrqFRl2Y/datasets/KylbergTextureDatasetV1/)"subsetOfKylbergTextureDataset-6classes-40samples.zip"The training and validation data are the images numbered 001 to 030, while the testing images have
 the numbers 031 to 040, this project covers preprocessing, histogram-based learning-free classification, and a multilayer perceptron approach. Evaluation metrics are applied to training and validation sets, and a thorough comparison of classification methods is presented. Additionally, potential enhancements through additional pyramid levels are discussed. This project holds significance within my Master's in Computer Vision at uOttawa (2023).
 
